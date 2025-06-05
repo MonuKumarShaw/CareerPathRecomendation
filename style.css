@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  padding: 20px;
+}
+
+/* Hero section styles */
+.hero {
+  text-align: center;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Heading styles */
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  color: #34495e;
+}
+
+/* Typing text effect */
+.typed-text {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #34495e;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  animation: blink-caret 0.8s step-end infinite;
+}
+
+/* Start button styles */
+.start-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: #34495e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-btn:hover {
+  background: #2c3e50;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #34495e; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .typed-text {
+    font-size: 1.1rem;
+    height: auto;
+  }
+
+  .start-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .typed-text {
+    font-size: 1rem;
+    height: auto;
+    white-space: normal;
+    border-right: none;
+  }
+
+  .start-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+
